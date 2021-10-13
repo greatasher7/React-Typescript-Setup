@@ -1,9 +1,15 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Pages/Routes';
+import Globalstyle from './Styles/Globalstyle';
 
 function App(): JSX.Element {
   return (
     <>
-      <h1>App Conponent</h1>
+      <Globalstyle />
+      <Router>
+        <Routes />
+      </Router>
     </>
   );
 }
