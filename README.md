@@ -13,6 +13,7 @@ You can just use this template after clone it.
 ### 2) Git initialize (You run terminal at root of this project)
 
 > rm -rf ./.git
+
 > git init
 
 ### 3) Install
