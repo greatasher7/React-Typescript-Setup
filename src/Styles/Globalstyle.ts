@@ -9,6 +9,9 @@ export default createGlobalStyle`
     html{
         font-size: 1vw;
     }
+    body{
+        font-family: "Font_test";
+    }
     a{
         color: inherit;
         text-decoration: none;

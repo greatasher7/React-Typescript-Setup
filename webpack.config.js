@@ -15,8 +15,8 @@ module.exports = {
     publicPath: '/',
   },
   module: {
-    // loader 나열
     rules: [
+      // loader 나열
       {
         // 1
         test: /\.(ts|js)x?$/,
@@ -33,8 +33,13 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        // file
+        // image
         test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        use: ['file-loader'],
+      },
+      {
+        // font
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ['file-loader'],
       },
     ],
