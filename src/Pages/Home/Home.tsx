@@ -4,6 +4,7 @@ import logoImg from '../../Assets/Images/logoimg.png';
 
 const Title = styled.h1`
   font-size: 5rem;
+  color: ${({ theme }) => theme.variable.colors.t_green};
 `;
 
 const Home = () => {
