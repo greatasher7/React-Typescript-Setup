@@ -1,4 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -62,6 +67,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       // 각 파일 형식으로 번들링 된 파일을 index.html에 자동으로 넣어줌
       template: './public/index.html',
+    }),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env),
     }),
     new CleanWebpackPlugin(),
   ],

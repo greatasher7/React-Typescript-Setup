@@ -7,6 +7,8 @@ import Globalstyle from './Styles/Globalstyle';
 import GlobalFont from './Styles/GlobalFont';
 
 function App(): JSX.Element {
+  console.log(process.env.TEST_NAME);
+
   return (
     <>
       <ThemeProvider theme={theme}>
