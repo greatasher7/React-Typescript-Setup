@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   // entry 파일 설정
@@ -17,7 +18,7 @@ module.exports = {
     rules: [
       // loader 나열
       {
-        // 1
+        // ts, js
         test: /\.(ts|js)x?$/,
         exclude: '/node_module/',
         use: [
@@ -34,12 +35,26 @@ module.exports = {
       {
         // image
         test: /\.(png|jpe?g|gif|svg|webp)$/i,
-        use: ['file-loader'],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'Assets/Images/[name].[ext]?[hash]',
+            },
+          },
+        ],
       },
       {
         // font
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader'],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'Assets/Fonts/[name].[ext]?[hash]',
+            },
+          },
+        ],
       },
     ],
   },
@@ -48,6 +63,7 @@ module.exports = {
       // 각 파일 형식으로 번들링 된 파일을 index.html에 자동으로 넣어줌
       template: './public/index.html',
     }),
+    new CleanWebpackPlugin(),
   ],
   devServer: {
     hot: true,
