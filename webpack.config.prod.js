@@ -8,8 +8,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  // entry 파일 설정
   mode: 'production',
+  // entry 파일 설정
   entry: {
     polyfills: '@babel/polyfill',
     bundle: './src/index.tsx',
