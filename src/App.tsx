@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Routes from './Pages/Routes';
+import RoutesComponent from './Pages/RoutesComponent';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './Styles/Theme';
 import Globalstyle from './Styles/Globalstyle';
@@ -15,7 +15,7 @@ function App(): JSX.Element {
         <Globalstyle />
         <GlobalFont />
         <Router>
-          <Routes />
+          <RoutesComponent />
         </Router>
       </ThemeProvider>
     </>
