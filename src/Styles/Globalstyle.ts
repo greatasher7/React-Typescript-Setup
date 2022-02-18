@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { reset } from 'styled-reset';
 
-export default createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
     ${reset}
     *, *::before, *::after{
         box-sizing: border-box;
@@ -11,6 +11,8 @@ export default createGlobalStyle`
     }
     body{
         font-family: "Font_test";
+        background-color: ${({ theme }) => theme.colors.background_color};
+        color: ${({ theme }) => theme.colors.text_color};
     }
     a{
         color: inherit;
@@ -19,4 +21,13 @@ export default createGlobalStyle`
     ul{
         list-style: none;
     }
+    input{
+        border: none;
+    }
+    input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+    
 `;
+
+export default GlobalStyle;

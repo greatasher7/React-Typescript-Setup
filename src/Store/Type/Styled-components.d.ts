@@ -1,9 +1,10 @@
 import 'styled-components';
-import { TypeMixin, TypeVariable } from '../../Styles/Theme';
+import { TypeMixin, TypeVariable, TypeColor } from '../../Styles/Theme';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
     variable: TypeVariable;
+    colors: TypeColor;
     mixin: TypeMixin;
   }
 }

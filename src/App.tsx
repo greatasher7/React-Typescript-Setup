@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import RoutesComponent from './Pages/RoutesComponent';
 import { ThemeProvider } from 'styled-components';
-import { theme } from './Styles/Theme';
-import Globalstyle from './Styles/Globalstyle';
+import { lightTheme, darkTheme } from './Styles/Theme';
+import GlobalStyle from './Styles/GlobalStyle';
 import GlobalFont from './Styles/GlobalFont';
 
 function App(): JSX.Element {
@@ -11,8 +11,8 @@ function App(): JSX.Element {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <Globalstyle />
+      <ThemeProvider theme={lightTheme}>
+        <GlobalStyle />
         <GlobalFont />
         <Router>
           <RoutesComponent />
