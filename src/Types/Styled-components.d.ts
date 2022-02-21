@@ -1,5 +1,5 @@
 import 'styled-components';
-import { TypeMixin, TypeVariable, TypeColor } from '../../Styles/Theme';
+import { TypeMixin, TypeVariable, TypeColor } from '../Styles/Theme';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
